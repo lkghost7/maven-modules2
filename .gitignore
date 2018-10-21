@@ -14,8 +14,4 @@ database/database.iml
 database/target/
 maven-modules.iml
 service/service.iml
-service/src/main/resources/
-service/src/test/
-web/src/main/resources/
-web/src/test/
 web/web.iml
