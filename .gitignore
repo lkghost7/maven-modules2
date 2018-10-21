@@ -8,10 +8,5 @@
 out
 gen
 .gitignore
-.idea/
 checkstyle.xml
-database/database.iml
-database/target/
-maven-modules.iml
-service/service.iml
-web/web.iml
+
