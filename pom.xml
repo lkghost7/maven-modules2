@@ -39,22 +39,22 @@
         <artifactId>java-hamcrest</artifactId>
         <version>2.0.0.0</version>
       </dependency>
-      <dependency>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-site-plugin</artifactId>
-        <version>3.7.1</version>
-      </dependency>
+      <!--<dependency>-->
+        <!--<groupId>org.apache.maven.plugins</groupId>-->
+        <!--<artifactId>maven-site-plugin</artifactId>-->
+        <!--<version>3.7.1</version>-->
+      <!--</dependency>-->
     </dependencies>
   </dependencyManagement>
 
 
   <build>
     <plugins>
-        <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.12.4</version>
-      </plugin>
+        <!--<plugin>-->
+        <!--<groupId>org.apache.maven.plugins</groupId>-->
+        <!--<artifactId>maven-surefire-plugin</artifactId>-->
+        <!--<version>2.12.4</version>-->
+      <!--</plugin>-->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -65,27 +65,31 @@
           <encoding>${file.encoding}</encoding>
         </configuration>
       </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-checkstyle-plugin</artifactId>
-        <version>3.0.0</version>
-        <executions>
-          <execution>
-            <id>validate</id>
-            <phase>validate</phase>
-            <configuration>
-              <configLocation>checkstyle.xml</configLocation>
-              <encoding>UTF-8</encoding>
-              <consoleOutput>true</consoleOutput>
-              <failsOnError>false</failsOnError>
+      <!--<plugin>-->
+        <!--<groupId>org.apache.maven.plugins</groupId>-->
+        <!--<artifactId>maven-checkstyle-plugin</artifactId>-->
+        <!--<version>3.0.0</version>-->
+        <!--<executions>-->
+          <!--<execution>-->
+            <!--<id>validate</id>-->
+            <!--<phase>validate</phase>-->
+            <!--<configuration>-->
+              <!--<configLocation>checkstyle.xml</configLocation>-->
+              <!--<encoding>UTF-8</encoding>-->
+              <!--<consoleOutput>true</consoleOutput>-->
+              <!--<failsOnError>false</failsOnError>-->
 
-            </configuration>
-            <goals>
-              <goal>check</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
+
+
+              <!--<linkXRef>false</linkXRef>-->
+
+            <!--</configuration>-->
+            <!--<goals>-->
+              <!--<goal>check</goal>-->
+            <!--</goals>-->
+          <!--</execution>-->
+        <!--</executions>-->
+      <!--</plugin>-->
     </plugins>
   </build>
 

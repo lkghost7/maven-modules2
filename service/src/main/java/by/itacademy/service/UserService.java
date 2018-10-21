@@ -5,18 +5,28 @@ import by.itacademy.model.User;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
+
 import java.util.List;
+
+
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class UserService {
 
     private static final UserService INSTANCE = new UserService();
 
+
     public List<User> getDefaultUser() {
         return UserDao.getInstance().findAll();
     }
 
-    public static UserService getInstance() {
-        return INSTANCE;
+//        public User getDefaultUser () {
+//            return UserDao.getInstance().getDefaultUser();
+//
+//        }
+
+        public static UserService getInstance () {
+            return INSTANCE;
+        }
     }
-}
+
