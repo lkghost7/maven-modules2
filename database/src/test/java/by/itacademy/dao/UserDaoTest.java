@@ -3,7 +3,7 @@ package by.itacademy.dao;
 import by.itacademy.model.User;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import java.util.List;
 
 public class UserDaoTest {
 
@@ -11,10 +11,15 @@ public class UserDaoTest {
 
     @Test
     public void saveUser() {
-        UserDao.getInstance().saveUser(new User("Vinty"));
+        UserDao.getInstance().saveUser(new User("Sensei"));
+        UserDao.getInstance().saveUser(new User("Klop"));
+        UserDao.getInstance().saveUser(new User("Zerg"));
+
     }
 
     @Test
     public void findAll() {
+        List<User> all = UserDao.getInstance().findAll();
+        all.forEach(a -> System.out.println(a));
     }
 }

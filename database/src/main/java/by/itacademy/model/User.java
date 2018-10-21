@@ -11,7 +11,7 @@ import javax.persistence.*;
 @ToString
 @Entity
 @Builder
-//@Table(name = "user", schema = "public")
+@Table(name = "user", schema = "public")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
