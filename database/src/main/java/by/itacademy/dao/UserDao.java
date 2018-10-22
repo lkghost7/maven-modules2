@@ -2,13 +2,16 @@ package by.itacademy.dao;
 
 
 import by.itacademy.connection.ConnectionPool;
-import by.itacademy.model.User;
+
+import by.itacademy.model.Userka;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 import org.hibernate.Session;
 
+import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.List;
+
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class UserDao {
@@ -18,26 +21,26 @@ public class UserDao {
         return INSTANCE;
     }
 
-    public Long saveUser(User user) {
+    public Long saveUser(Userka userka) {
         Session currentSession = ConnectionPool.getInstance().getConnection();
         currentSession.beginTransaction();
-        Serializable id = currentSession.save(user);
+        Serializable id = currentSession.save(userka);
         currentSession.getTransaction().commit();
         currentSession.close();
         return (Long) id;
     }
 
-    public List<User> findAll() {
+    public List<Userka> findAll() {
         Session currentSession = ConnectionPool.getInstance().getConnection();
-        List<User> users = currentSession.createQuery("select u from User u", User.class).list();
+        List<Userka> usekas = currentSession.createQuery("select u from Userka u", Userka.class).list();
         currentSession.close();
-        return users;
+        return usekas;
     }
 
     public void delete(Long id) {
         Session session = ConnectionPool.getInstance().getConnection();
         session.beginTransaction();
-        int result = session.createQuery("delete from User u where u.id = " + id).executeUpdate();
+        int result = session.createQuery("delete from Userka u where u.id = " + id).executeUpdate();
         session.getTransaction().commit();
         session.close();
     }
