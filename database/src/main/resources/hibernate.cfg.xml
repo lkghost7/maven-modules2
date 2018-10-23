@@ -9,12 +9,13 @@
     <property name="connection.driver_class">org.postgresql.Driver</property>
     <property name="connection.username">root</property>
     <property name="connection.password">root</property>
-    <property name="dialect">org.hibernate.dialect.PostgreSQL95Dialect</property>
+    <property name="dialect">org.hibernate.dialect.PostgresPlusDialect</property>
     <property name="show_sql">true</property>
     <property name="format_sql">true</property>
-    <property name="default_schema">public</property>
+    <!--<property name="default_schema">hib</property>-->
     <mapping class="by.itacademy.model.Test"/>
-    <mapping class="by.itacademy.model.User"/>
+    <!--<mapping class="by.itacademy.model.User"/>-->
+    <mapping class="by.itacademy.model.Userka"/>
     <!-- DB schema will be updated if needed -->
      <!--<property name="hbm2ddl.auto">create</property>-->
   </session-factory>

@@ -5,7 +5,7 @@
 
 <html>
 <head>
-    <title>Title</title>
+    <title>maven</title>
 </head>
 <body>
 <div>
