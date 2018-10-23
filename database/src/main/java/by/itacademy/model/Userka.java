@@ -11,14 +11,21 @@ import javax.persistence.*;
 @ToString
 @Entity
 @Builder
-//@Table(name = "user", schema = "public")
-public class User {
+
+//@Table(name = "userka", schema = "public")
+@Table(name = "userka")
+public class Userka {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
 
-    public User(String name) {
+    public Userka(String name) {
         this.name = name;
     }
+
+    public Userka(Long id) {
+        this.id = id;
+    }
 }
+
